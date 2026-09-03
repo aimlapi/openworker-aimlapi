@@ -54,6 +54,7 @@ export const PROVIDER_LOGOS: Record<string, string> = {
 };
 
 export const PROVIDER_ORDER = [
+  "aimlapi",
   "anthropic",
   "openai",
   "gemini",
@@ -73,7 +74,6 @@ export const PROVIDER_ORDER = [
   "qwen",
   "minimax",
   "xai",
-  "aimlapi",
 ];
 
 export function providerRank(name: string): number {

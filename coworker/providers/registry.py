@@ -380,6 +380,17 @@ def _responses_compat(
 
 
 DESCRIPTORS: list[ProviderDescriptor] = [
+    # Model ids here are aimlapi.com's OWN namespace and do NOT match OpenRouter's slugs
+    # even where the model is identical — checked against their live catalog 2026-09-03,
+    # three of OpenRouter's four ids resolve to nothing there. See matrix.py.
+    _compat(
+        "aimlapi",
+        "aimlapi.com",
+        base_url=AIMLAPI_BASE_URL,
+        recommended_model="zhipu/glm-5.2",
+        env_key="AIMLAPI_API_KEY",
+        headers_for=_aimlapi_headers,
+    ),
     ProviderDescriptor(
         name="openai",
         title="OpenAI",
@@ -711,17 +722,6 @@ DESCRIPTORS: list[ProviderDescriptor] = [
         base_url="https://openrouter.ai/api/v1",
         recommended_model="z-ai/glm-5.2",
         env_key="OPENROUTER_API_KEY",
-    ),
-    # Model ids here are aimlapi.com's OWN namespace and do NOT match OpenRouter's slugs
-    # even where the model is identical — checked against their live catalog 2026-09-03,
-    # three of OpenRouter's four ids above resolve to nothing there. See matrix.py.
-    _compat(
-        "aimlapi",
-        "aimlapi.com",
-        base_url=AIMLAPI_BASE_URL,
-        recommended_model="zhipu/glm-5.2",
-        env_key="AIMLAPI_API_KEY",
-        headers_for=_aimlapi_headers,
     ),
     ProviderDescriptor(
         name="ollama",
