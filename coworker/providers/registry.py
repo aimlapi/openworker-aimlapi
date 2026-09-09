@@ -40,7 +40,7 @@ _AIMLAPI_ORIGIN = "https://api.aimlapi.com"
 AIMLAPI_ATTRIBUTION_HEADERS: dict[str, str] = {
     "HTTP-Referer": "https://github.com/andrewyng/openworker",
     "X-Title": "OpenWorker",
-    "X-AIMLAPI-Partner-ID": "part_openworker",
+    "X-AIMLAPI-Partner-ID": "part_nLTCEqZPnFgQDrMIuu7M5CoQ",
     "X-AIMLAPI-Source": "agent/openworker",
 }
 
